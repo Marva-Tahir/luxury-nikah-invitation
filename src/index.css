@@ -1,0 +1,12 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom font imports */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Scheherazade:wght@400;700&display=swap');
+
+/* Global body styling */
+body {
+  @apply bg-ivory font-serif;
+}
