@@ -75,9 +75,9 @@ export const BismillahScene: React.FC<BismillahSceneProps> = ({ onComplete }) =>
           <h1
             dir="rtl"
             lang="ar"
-            className="font-arabic text-3xl sm:text-5xl md:text-6xl text-[#F5D3DA] font-bold leading-relaxed tracking-normal select-none"
+            className="font-arabic text-3xl sm:text-5xl md:text-6xl text-[#8B1A2E] font-bold leading-relaxed tracking-normal select-none"
             style={{
-              textShadow: '0 2px 16px rgba(223, 183, 108, 0.5), 0 1px 3px rgba(150, 116, 49, 0.3)',
+              textShadow: '0 2px 20px rgba(139, 26, 46, 0.3), 0 1px 4px rgba(100, 10, 30, 0.2)',
             }}
           >
             بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
@@ -106,7 +106,7 @@ export const BismillahScene: React.FC<BismillahSceneProps> = ({ onComplete }) =>
           <p className="font-serif italic text-base sm:text-lg md:text-xl text-[#3D2C31] font-medium leading-relaxed">
             "In the name of Allah, the Most Compassionate, the Most Merciful."
           </p>
-          <p className="font-cinzel text-[11px] sm:text-xs tracking-[0.25em] text-[#F5D3DA] uppercase">
+          <p className="font-cinzel text-[11px] sm:text-xs tracking-[0.25em] text-[#8B1A2E]/70 uppercase">
             Surah An-Naml • 30
           </p>
         </motion.div>
