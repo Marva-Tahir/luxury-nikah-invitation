@@ -50,27 +50,17 @@ export const EnvelopeOpening: React.FC<EnvelopeOpeningProps> = ({ onComplete }) 
       {/* Soft warm vignette */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_40%,_rgba(238,217,221,0.45)_100%)] pointer-events-none" />
 
-      {/* Floating subtle rose gold sparkles */}
+      {/* Static decorative dots – no animation */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(12)].map((_, i) => (
-          <motion.div
+          <div
             key={i}
-            className="absolute rounded-full bg-[#DFB76C]/30"
+            className="absolute rounded-full bg-[#DFB76C]/20"
             style={{
               width: `${(i % 3) + 2}px`,
               height: `${(i % 3) + 2}px`,
               top: `${8 + (i * 7.5)}%`,
               left: `${6 + ((i * 17) % 86)}%`,
-            }}
-            animate={{
-              y: [-10, 15, -10],
-              opacity: [0.2, 0.6, 0.2],
-            }}
-            transition={{
-              duration: 4.5 + (i % 3),
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: i * 0.3,
             }}
           />
         ))}
@@ -169,16 +159,11 @@ export const EnvelopeOpening: React.FC<EnvelopeOpeningProps> = ({ onComplete }) 
 
         {/* Subtle, elegant hint right over the bow */}
         {stage === 'idle' && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: [0.5, 0.9, 0.5] }}
-            transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute bottom-6 inset-x-0 text-center z-30 pointer-events-none"
-          >
+          <div className="absolute bottom-6 inset-x-0 text-center z-30 pointer-events-none opacity-70">
             <span className="font-cinzel text-[10px] tracking-[0.25em] text-[#967431] uppercase font-semibold">
               Tap the Bow to Open
             </span>
-          </motion.div>
+          </div>
         )}
 
       </div>
