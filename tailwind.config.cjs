@@ -7,30 +7,26 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ivory: {
-          DEFAULT: "#FAF7F0",
-          light: "#FDFBF7",
-          dark: "#EFE8D8",
-          warm: "#F5EFEB",
+        pearl: {
+          DEFAULT: "#FDFBF7",
+          light: "#FFFFFF",
+          warm: "#FBF7F0",
+          cream: "#F7F2E7",
         },
-        champagne: {
-          DEFAULT: "#F5E8C7",
-          light: "#FAF0D7",
-          dark: "#E4D1A3",
-        },
-        emerald: {
-          DEFAULT: "#064E3B",
-          dark: "#08291F",
-          deep: "#041C15",
-          rich: "#0A3D2E",
-          light: "#0F766E",
+        rose: {
+          blush: "#FAF0F2",
+          soft: "#F5E1E4",
+          petal: "#ECC8CF",
+          dusty: "#C98A98",
+          deep: "#8F4E5D",
         },
         gold: {
-          light: "#F5E5C9",
+          light: "#FDF1D6",
+          champagne: "#F4E3BF",
           DEFAULT: "#C5A059",
-          dark: "#8F6E2B",
+          rich: "#DFB76C",
+          dark: "#967431",
           antique: "#7C5D23",
-          shimmer: "#DFB76C",
         },
       },
       fontFamily: {
@@ -41,15 +37,9 @@ module.exports = {
         sans: ["'Montserrat'", "sans-serif"],
       },
       boxShadow: {
-        envelope: "0 25px 60px -15px rgba(4, 28, 21, 0.4), 0 0 40px rgba(197, 160, 89, 0.15)",
-        seal: "0 6px 16px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.4), inset 0 -3px 6px rgba(0, 0, 0, 0.5)",
-        card: "0 20px 50px rgba(4, 28, 21, 0.25), 0 0 30px rgba(197, 160, 89, 0.12)",
-        goldGlow: "0 0 25px rgba(223, 183, 108, 0.45)",
-      },
-      backgroundImage: {
-        'gold-metallic': 'linear-gradient(135deg, #F5E5C9 0%, #C5A059 50%, #8F6E2B 100%)',
-        'gold-sheen': 'linear-gradient(90deg, #F5E5C9 0%, #DFB76C 25%, #C5A059 50%, #DFB76C 75%, #F5E5C9 100%)',
-        'emerald-silk': 'radial-gradient(circle at 50% 20%, #0F5E46 0%, #08291F 70%, #041C15 100%)',
+        envelope: "0 20px 60px -10px rgba(120, 80, 90, 0.18), 0 0 35px rgba(197, 160, 89, 0.2)",
+        bow: "0 8px 24px rgba(143, 78, 93, 0.25), inset 0 2px 4px rgba(255, 255, 255, 0.6)",
+        card: "0 25px 50px -12px rgba(90, 50, 60, 0.15), 0 0 25px rgba(223, 183, 108, 0.2)",
       },
     },
   },

@@ -36,8 +36,8 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDateISO })
 
   if (!timeLeft) {
     return (
-      <div className="py-3 px-6 rounded-xl bg-[#064E3B]/10 border border-gold/40 text-center">
-        <p className="font-cinzel text-sm sm:text-base text-emerald font-semibold uppercase tracking-wider">
+      <div className="py-3 px-6 rounded-xl bg-rose-blush border border-[#DFB76C]/60 text-center">
+        <p className="font-cinzel text-sm sm:text-base text-[#8F4E5D] font-semibold uppercase tracking-wider">
           Mubarak! The Blessed Day Has Arrived
         </p>
       </div>
@@ -53,7 +53,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDateISO })
 
   return (
     <div className="w-full flex flex-col items-center">
-      <p className="font-cinzel text-[11px] sm:text-xs tracking-[0.25em] text-[#8F6E2B] uppercase font-semibold mb-3">
+      <p className="font-cinzel text-[11px] sm:text-xs tracking-[0.25em] text-[#967431] uppercase font-semibold mb-3">
         Counting Down to the Mubarak Moment
       </p>
 
@@ -62,12 +62,12 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDateISO })
           <motion.div
             key={idx}
             whileHover={{ y: -2 }}
-            className="flex flex-col items-center justify-center py-2.5 px-1 rounded-xl bg-gradient-to-b from-[#FFFDF9] to-[#F7F1E1] border border-[#C5A059]/50 shadow-sm"
+            className="flex flex-col items-center justify-center py-2.5 px-1 rounded-xl bg-gradient-to-b from-[#FFFDF9] to-[#FAF2F4] border border-[#DFB76C]/50 shadow-sm"
           >
-            <span className="font-serif text-xl sm:text-2xl font-bold text-emerald">
+            <span className="font-serif text-xl sm:text-2xl font-bold text-[#8F4E5D]">
               {String(unit.value).padStart(2, '0')}
             </span>
-            <span className="font-cinzel text-[9px] sm:text-[10px] tracking-wider text-[#8F6E2B] uppercase mt-0.5">
+            <span className="font-cinzel text-[9px] sm:text-[10px] tracking-wider text-[#967431] uppercase mt-0.5 font-medium">
               {unit.label}
             </span>
           </motion.div>

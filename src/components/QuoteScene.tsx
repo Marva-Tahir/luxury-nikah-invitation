@@ -17,21 +17,21 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({ onComplete }) => {
   return (
     <div
       onClick={onComplete}
-      className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center px-6 py-12 text-center bg-[#FAF7F0] cursor-pointer select-none overflow-hidden"
+      className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center px-4 sm:px-6 py-12 text-center bg-[#FAF6F0] cursor-pointer select-none overflow-hidden"
     >
-      {/* Background subtle texture */}
-      <div className="absolute inset-0 bg-islamic-pattern opacity-50 pointer-events-none" />
+      {/* Background pearl damask */}
+      <div className="absolute inset-0 bg-pearl-damask opacity-50 pointer-events-none" />
 
-      {/* Floating golden dust particles */}
+      {/* Floating subtle rose-gold dust particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(14)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute rounded-full bg-gold-light/40"
+            className="absolute rounded-full bg-[#DFB76C]/30"
             style={{
               width: `${(i % 3) + 2}px`,
               height: `${(i % 3) + 2}px`,
-              top: `${12 + (i * 6)}%`,
+              top: `${10 + (i * 6)}%`,
               left: `${5 + ((i * 17) % 88)}%`,
             }}
             animate={{
@@ -49,18 +49,18 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({ onComplete }) => {
       </div>
 
       {/* Luxury Arch Card Frame */}
-      <div className="relative z-10 max-w-lg mx-auto p-6 sm:p-10 rounded-3xl bg-white/40 backdrop-blur-[2px] border border-[#C5A059]/40 shadow-card">
-        {/* Quranic Reference / Verse Header */}
+      <div className="relative z-10 max-w-lg mx-auto p-6 sm:p-10 rounded-3xl bg-[#FFFDF9]/85 backdrop-blur-[2px] border border-[#DFB76C]/50 shadow-card">
+        {/* Sacred Union Header with Rose-Gold Heart */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="mb-6 flex flex-col items-center"
         >
-          <div className="w-8 h-8 rounded-full border border-gold/50 flex items-center justify-center text-gold mb-2">
-            <Heart size={14} className="fill-gold/20" />
+          <div className="w-9 h-9 rounded-full border border-[#DFB76C] flex items-center justify-center bg-rose-blush mb-2 shadow-sm">
+            <Heart size={15} className="text-[#C98A98] fill-[#ECC8CF]" />
           </div>
-          <span className="font-cinzel text-xs tracking-[0.3em] text-[#8F6E2B] uppercase font-semibold">
+          <span className="font-cinzel text-xs tracking-[0.3em] text-[#967431] uppercase font-semibold">
             The Sacred Union
           </span>
         </motion.div>
@@ -70,7 +70,7 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({ onComplete }) => {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.4, ease: 'easeOut' }}
-          className="font-serif text-xl sm:text-2xl md:text-3xl text-emerald font-semibold leading-snug tracking-wide"
+          className="font-serif text-xl sm:text-2xl md:text-3xl text-[#3D262C] font-semibold leading-snug tracking-wide"
         >
           "Two hearts, one beautiful promise, and a lifetime of duas."
         </motion.p>
@@ -80,7 +80,7 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({ onComplete }) => {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 1.4, ease: 'easeOut' }}
-          className="font-serif italic text-base sm:text-lg text-stone-700 font-normal leading-relaxed mt-5"
+          className="font-serif italic text-base sm:text-lg text-[#61494F] font-normal leading-relaxed mt-5"
         >
           By the grace of Allah, two souls are about to begin a journey of love, faith, and togetherness.
         </motion.p>
@@ -92,17 +92,17 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({ onComplete }) => {
           transition={{ duration: 1.2, delay: 2.2, ease: 'easeOut' }}
           className="flex items-center justify-center gap-2 mt-8 mx-auto w-32"
         >
-          <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-gold" />
-          <div className="w-1.5 h-1.5 rotate-45 bg-gold" />
-          <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-gold" />
+          <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#DFB76C]" />
+          <div className="w-1.5 h-1.5 rotate-45 bg-[#DFB76C]" />
+          <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#DFB76C]" />
         </motion.div>
 
-        {/* Quranic excerpt note */}
+        {/* Quranic excerpt */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 2.7 }}
-          className="font-arabic text-sm text-gold-dark mt-4"
+          className="font-arabic text-sm text-[#967431] mt-4"
         >
           وَخَلَقْنَاكُمْ أَزْوَاجًا
         </motion.p>
@@ -111,9 +111,9 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({ onComplete }) => {
       {/* Gentle Tap to Proceed Hint */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: [0.3, 0.8, 0.3] }}
+        animate={{ opacity: [0.35, 0.8, 0.35] }}
         transition={{ duration: 2.5, repeat: Infinity, delay: 3 }}
-        className="absolute bottom-8 flex flex-col items-center gap-1 text-[#8F6E2B]/75 text-xs font-sans tracking-widest uppercase"
+        className="absolute bottom-8 flex flex-col items-center gap-1 text-[#967431]/80 text-xs font-sans tracking-widest uppercase"
       >
         <span>View Invitation</span>
         <ChevronDown size={14} />

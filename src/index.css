@@ -7,44 +7,47 @@
     margin: 0;
     padding: 0;
     min-height: 100%;
-    background-color: #0A1C16;
-    color: #2D241E;
+    background-color: #FAF6F0;
+    color: #2D2124;
     font-family: 'Playfair Display', serif;
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
   }
 }
 
-/* Subtle luxury Islamic geometric pattern background */
-.bg-islamic-pattern {
-  background-color: #FAF7F0;
-  background-image: radial-gradient(#C5A059 0.65px, transparent 0.65px), radial-gradient(#064E3B 0.65px, #FAF7F0 0.65px);
-  background-size: 26px 26px;
-  background-position: 0 0, 13px 13px;
+/* Subtle luxury damask floral pattern for pearl background */
+.bg-pearl-damask {
+  background-color: #FAF6F0;
+  background-image: 
+    radial-gradient(#DFB76C 0.6px, transparent 0.6px), 
+    radial-gradient(#E8C5CE 0.6px, #FAF6F0 0.6px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
 }
 
-.bg-emerald-pattern {
-  background-color: #08291F;
-  background-image: radial-gradient(rgba(197, 160, 89, 0.15) 0.8px, transparent 0.8px);
-  background-size: 24px 24px;
+/* Silk satin ribbon texture */
+.bg-satin-ribbon {
+  background: linear-gradient(
+    180deg,
+    #F9E7EA 0%,
+    #ECC8CF 25%,
+    #DFB76C 50%,
+    #ECC8CF 75%,
+    #F9E7EA 100%
+  );
 }
 
-/* Metallic Gold Text Effect */
+/* Pure Metallic Gold Text Effect */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #FFF0D4 0%, #DFB76C 25%, #C5A059 50%, #916F2E 75%, #DFB76C 100%);
+  background: linear-gradient(135deg, #ECCB85 0%, #DFB76C 30%, #C5A059 60%, #967431 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gold-bright {
-  background: linear-gradient(180deg, #FFF8E7 0%, #E2BE76 50%, #B88E3E 100%);
+.text-rose-gold {
+  background: linear-gradient(135deg, #DFB76C 0%, #C98A98 50%, #8F4E5D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-/* Gold border gradient */
-.border-gold-gradient {
-  border-image: linear-gradient(to bottom right, #F5E5C9, #C5A059, #8F6E2B, #DFB76C) 1;
 }
 
 /* Shimmer animation */
@@ -54,20 +57,20 @@
 }
 
 .animate-shimmer {
-  animation: shimmer 3.5s infinite;
+  animation: shimmer 3s infinite;
 }
 
-/* Floating animation */
-@keyframes softFloat {
+/* Subtle float */
+@keyframes delicateFloat {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-6px); }
 }
 
-.animate-soft-float {
-  animation: softFloat 5s ease-in-out infinite;
+.animate-delicate-float {
+  animation: delicateFloat 4.5s ease-in-out infinite;
 }
 
-/* Prevent unwanted mobile pull-to-refresh */
+/* Mobile overscroll lock */
 body {
   overscroll-behavior-y: none;
 }

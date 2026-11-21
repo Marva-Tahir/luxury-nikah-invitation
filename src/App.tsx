@@ -17,7 +17,7 @@ export const App: React.FC = () => {
   const replayExperience = () => setScene(0);
 
   return (
-    <div className="relative min-h-[100dvh] w-full bg-[#0A1C16] text-stone-800 font-serif selection:bg-[#C5A059] selection:text-white overflow-x-hidden">
+    <div className="relative min-h-[100dvh] w-full bg-[#FAF6F0] text-stone-800 font-serif selection:bg-[#DFB76C] selection:text-white overflow-x-hidden">
       {/* Background Ambient Music Controller */}
       <MusicController
         musicSrc={invitationConfig.audio.src}
@@ -33,7 +33,7 @@ export const App: React.FC = () => {
             exit={{ opacity: 0, y: -10 }}
             transition={{ delay: 0.8 }}
             onClick={skipToIntro}
-            className="fixed top-4 left-4 z-50 px-3.5 py-1.5 rounded-full bg-[#FAF7F0]/85 backdrop-blur-md border border-[#C5A059]/60 text-[#8F6E2B] text-xs font-cinzel font-semibold tracking-wider uppercase shadow-md hover:bg-[#FAF7F0] hover:text-emerald transition-all duration-200"
+            className="fixed top-4 left-4 z-50 px-3.5 py-1.5 rounded-full bg-[#FFFDF9]/90 backdrop-blur-md border border-[#DFB76C]/60 text-[#8F4E5D] text-xs font-cinzel font-semibold tracking-wider uppercase shadow-md hover:bg-[#FFFDF9] hover:text-[#967431] transition-all duration-200"
           >
             Skip Intro
           </motion.button>
@@ -50,9 +50,9 @@ export const App: React.FC = () => {
             transition={{ delay: 1 }}
             onClick={replayExperience}
             title="Replay Envelope Opening"
-            className="fixed top-4 left-4 z-50 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FAF7F0]/80 backdrop-blur-md border border-[#C5A059]/60 text-stone-700 text-xs font-cinzel font-medium shadow-md hover:bg-[#FAF7F0] hover:text-emerald transition-all"
+            className="fixed top-4 left-4 z-50 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FFFDF9]/90 backdrop-blur-md border border-[#DFB76C]/60 text-[#8F4E5D] text-xs font-cinzel font-medium shadow-md hover:bg-[#FFFDF9] hover:text-[#967431] transition-all"
           >
-            <RotateCcw size={12} className="text-[#C5A059]" />
+            <RotateCcw size={12} className="text-[#DFB76C]" />
             <span className="hidden sm:inline">Reopen Envelope</span>
           </motion.button>
         )}
@@ -65,7 +65,7 @@ export const App: React.FC = () => {
             key="envelope-scene"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0, scale: 1.04, transition: { duration: 0.9, ease: 'easeInOut' } }}
+            exit={{ opacity: 0, scale: 1.04, transition: { duration: 0.8, ease: 'easeInOut' } }}
             className="w-full min-h-[100dvh]"
           >
             <EnvelopeOpening onComplete={goNext} />
@@ -77,8 +77,8 @@ export const App: React.FC = () => {
             key="bismillah-scene"
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, y: -20, transition: { duration: 0.8, ease: 'easeInOut' } }}
-            transition={{ duration: 1 }}
+            exit={{ opacity: 0, y: -20, transition: { duration: 0.7, ease: 'easeInOut' } }}
+            transition={{ duration: 0.9 }}
             className="w-full min-h-[100dvh]"
           >
             <BismillahScene onComplete={goNext} />
@@ -90,8 +90,8 @@ export const App: React.FC = () => {
             key="quote-scene"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.97, transition: { duration: 0.8, ease: 'easeInOut' } }}
-            transition={{ duration: 1 }}
+            exit={{ opacity: 0, scale: 0.97, transition: { duration: 0.7, ease: 'easeInOut' } }}
+            transition={{ duration: 0.9 }}
             className="w-full min-h-[100dvh]"
           >
             <QuoteScene onComplete={goNext} />
@@ -103,7 +103,7 @@ export const App: React.FC = () => {
             key="nikah-invitation-scene"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, ease: [0.25, 1, 0.5, 1] }}
+            transition={{ duration: 1.1, ease: [0.25, 1, 0.5, 1] }}
             className="w-full min-h-[100dvh]"
           >
             <NikahInvitation />
