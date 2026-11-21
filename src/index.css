@@ -1,12 +1,73 @@
-/* src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom font imports */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Scheherazade:wght@400;700&display=swap');
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: #0A1C16;
+    color: #2D241E;
+    font-family: 'Playfair Display', serif;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+}
 
-/* Global body styling */
+/* Subtle luxury Islamic geometric pattern background */
+.bg-islamic-pattern {
+  background-color: #FAF7F0;
+  background-image: radial-gradient(#C5A059 0.65px, transparent 0.65px), radial-gradient(#064E3B 0.65px, #FAF7F0 0.65px);
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
+}
+
+.bg-emerald-pattern {
+  background-color: #08291F;
+  background-image: radial-gradient(rgba(197, 160, 89, 0.15) 0.8px, transparent 0.8px);
+  background-size: 24px 24px;
+}
+
+/* Metallic Gold Text Effect */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF0D4 0%, #DFB76C 25%, #C5A059 50%, #916F2E 75%, #DFB76C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-bright {
+  background: linear-gradient(180deg, #FFF8E7 0%, #E2BE76 50%, #B88E3E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gold border gradient */
+.border-gold-gradient {
+  border-image: linear-gradient(to bottom right, #F5E5C9, #C5A059, #8F6E2B, #DFB76C) 1;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 3.5s infinite;
+}
+
+/* Floating animation */
+@keyframes softFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-soft-float {
+  animation: softFloat 5s ease-in-out infinite;
+}
+
+/* Prevent unwanted mobile pull-to-refresh */
 body {
-  @apply bg-ivory font-serif;
+  overscroll-behavior-y: none;
 }

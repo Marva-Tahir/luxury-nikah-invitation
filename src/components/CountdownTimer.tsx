@@ -1,53 +1,79 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-/**
- * CountdownTimer – shows days, hours, minutes, seconds until targetDate.
- * targetDate should be an ISO string.
- */
-const CountdownTimer: React.FC<{ targetDate: string }> = ({ targetDate }) => {
-  const calculateTimeLeft = () => {
-    const diff = new Date(targetDate).getTime() - Date.now();
+interface CountdownTimerProps {
+  targetDateISO: string;
+}
+
+interface TimeRemaining {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
+export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDateISO }) => {
+  const calculateTimeLeft = (): TimeRemaining | null => {
+    const diff = new Date(targetDateISO).getTime() - new Date().getTime();
     if (diff <= 0) return null;
-    const time = {
+
+    return {
       days: Math.floor(diff / (1000 * 60 * 60 * 24)),
       hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
       minutes: Math.floor((diff / (1000 * 60)) % 60),
       seconds: Math.floor((diff / 1000) % 60),
     };
-    return time;
   };
 
-  const [timeLeft, setTimeLeft] = useState<ReturnType<typeof calculateTimeLeft>>(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState<TimeRemaining | null>(calculateTimeLeft());
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
     return () => clearInterval(timer);
-  }, [targetDate]);
+  }, [targetDateISO]);
 
   if (!timeLeft) {
-    return <p className="text-emerald font-serif">The day has arrived!</p>;
+    return (
+      <div className="py-3 px-6 rounded-xl bg-[#064E3B]/10 border border-gold/40 text-center">
+        <p className="font-cinzel text-sm sm:text-base text-emerald font-semibold uppercase tracking-wider">
+          Mubarak! The Blessed Day Has Arrived
+        </p>
+      </div>
+    );
   }
 
-  const { days, hours, minutes, seconds } = timeLeft;
+  const units = [
+    { label: 'Days', value: timeLeft.days },
+    { label: 'Hours', value: timeLeft.hours },
+    { label: 'Minutes', value: timeLeft.minutes },
+    { label: 'Seconds', value: timeLeft.seconds },
+  ];
 
   return (
-    <motion.div
-      className="flex space-x-2 text-center"
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-    >
-      {[{ label: 'Days', value: days }, { label: 'Hours', value: hours }, { label: 'Minutes', value: minutes }, { label: 'Seconds', value: seconds }].map(
-        (item, idx) => (
-          <div key={idx} className="px-2">
-            <p className="text-gold text-xl font-bold">{item.value}</p>
-            <p className="text-emerald text-sm">{item.label}</p>
-          </div>
-        ),
-      )}
-    </motion.div>
+    <div className="w-full flex flex-col items-center">
+      <p className="font-cinzel text-[11px] sm:text-xs tracking-[0.25em] text-[#8F6E2B] uppercase font-semibold mb-3">
+        Counting Down to the Mubarak Moment
+      </p>
+
+      <div className="grid grid-cols-4 gap-2 sm:gap-3 w-full max-w-xs sm:max-w-sm">
+        {units.map((unit, idx) => (
+          <motion.div
+            key={idx}
+            whileHover={{ y: -2 }}
+            className="flex flex-col items-center justify-center py-2.5 px-1 rounded-xl bg-gradient-to-b from-[#FFFDF9] to-[#F7F1E1] border border-[#C5A059]/50 shadow-sm"
+          >
+            <span className="font-serif text-xl sm:text-2xl font-bold text-emerald">
+              {String(unit.value).padStart(2, '0')}
+            </span>
+            <span className="font-cinzel text-[9px] sm:text-[10px] tracking-wider text-[#8F6E2B] uppercase mt-0.5">
+              {unit.label}
+            </span>
+          </motion.div>
+        ))}
+      </div>
+    </div>
   );
 };
 
