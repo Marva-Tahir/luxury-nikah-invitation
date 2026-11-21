@@ -51,7 +51,7 @@ export const RibbonBow: React.FC<RibbonBowProps> = ({ onUntie, disabled }) => {
           transition={
             isUntying
               ? { duration: 0.65 }
-              : { duration: 3.5, repeat: Infinity, ease: 'easeInOut' }
+              : { duration: 3.5, repeat: 0, ease: 'easeInOut' }
           }
           className="absolute right-1/2 w-12 sm:w-16 h-10 sm:h-12 origin-right -mr-1 rounded-l-full shadow-bow"
           style={{
@@ -75,7 +75,7 @@ export const RibbonBow: React.FC<RibbonBowProps> = ({ onUntie, disabled }) => {
           transition={
             isUntying
               ? { duration: 0.65 }
-              : { duration: 3.5, repeat: Infinity, ease: 'easeInOut' }
+              : { duration: 3.5, repeat: 0, ease: 'easeInOut' }
           }
           className="absolute left-1/2 w-12 sm:w-16 h-10 sm:h-12 origin-left -ml-1 rounded-r-full shadow-bow"
           style={{
@@ -101,7 +101,7 @@ export const RibbonBow: React.FC<RibbonBowProps> = ({ onUntie, disabled }) => {
             transition={
               isUntying
                 ? { duration: 0.6 }
-                : { duration: 4, repeat: Infinity, ease: 'easeInOut' }
+                : { duration: 4, repeat: 0, ease: 'easeInOut' }
             }
             className="w-5 sm:w-6 h-16 sm:h-20 -mr-1.5 origin-top"
             style={{
@@ -123,7 +123,7 @@ export const RibbonBow: React.FC<RibbonBowProps> = ({ onUntie, disabled }) => {
             transition={
               isUntying
                 ? { duration: 0.6 }
-                : { duration: 4.2, repeat: Infinity, ease: 'easeInOut' }
+                : { duration: 4.2, repeat: 0, ease: 'easeInOut' }
             }
             className="w-5 sm:w-6 h-18 sm:h-22 -ml-1.5 origin-top"
             style={{

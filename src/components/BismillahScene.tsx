@@ -75,7 +75,7 @@ export const BismillahScene: React.FC<BismillahSceneProps> = ({ onComplete }) =>
           <h1
             dir="rtl"
             lang="ar"
-            className="font-arabic text-3xl sm:text-5xl md:text-6xl text-[#967431] font-bold leading-relaxed tracking-normal select-none"
+            className="font-arabic text-3xl sm:text-5xl md:text-6xl text-[#F5D3DA] font-bold leading-relaxed tracking-normal select-none"
             style={{
               textShadow: '0 2px 16px rgba(223, 183, 108, 0.5), 0 1px 3px rgba(150, 116, 49, 0.3)',
             }}
@@ -106,7 +106,7 @@ export const BismillahScene: React.FC<BismillahSceneProps> = ({ onComplete }) =>
           <p className="font-serif italic text-base sm:text-lg md:text-xl text-[#3D2C31] font-medium leading-relaxed">
             "In the name of Allah, the Most Compassionate, the Most Merciful."
           </p>
-          <p className="font-cinzel text-[11px] sm:text-xs tracking-[0.25em] text-[#967431] uppercase">
+          <p className="font-cinzel text-[11px] sm:text-xs tracking-[0.25em] text-[#F5D3DA] uppercase">
             Surah An-Naml • 30
           </p>
         </motion.div>
@@ -117,7 +117,7 @@ export const BismillahScene: React.FC<BismillahSceneProps> = ({ onComplete }) =>
         initial={{ opacity: 0 }}
         animate={{ opacity: [0.35, 0.8, 0.35] }}
         transition={{ duration: 2.5, repeat: Infinity, delay: 2 }}
-        className="absolute bottom-8 flex flex-col items-center gap-1 text-[#967431]/80 text-xs font-sans tracking-widest uppercase"
+        className="absolute bottom-8 flex flex-col items-center gap-1 text-[#F5D3DA]/80 text-xs font-sans tracking-widest uppercase"
       >
         <span>Tap to continue</span>
         <ChevronDown size={14} />
