@@ -87,49 +87,7 @@ export const EnvelopeOpening: React.FC<EnvelopeOpeningProps> = ({ onComplete }) 
           <div className="absolute bottom-1 right-1 w-4 h-4 border-b-2 border-r-2 border-[#DFB76C]" />
         </div>
 
-        {/* INSIDE: The Emerging Pearl & Gold Bismillah Card */}
-        <motion.div
-          animate={
-            isCardEmerging
-              ? { scale: 1.02, y: -20, opacity: 1 }
-              : { scale: 0.98, opacity: 0.9 }
-          }
-          transition={{ duration: 1.1, ease: [0.25, 1, 0.5, 1] }}
-          className="absolute inset-4 sm:inset-6 rounded-2xl bg-[#FFFDF9] border-2 border-[#DFB76C] shadow-card flex flex-col items-center justify-between p-6 z-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 50% 30%, #FFFFFF 0%, #FAF6F0 100%)',
-          }}
-        >
-          {/* Card Preview Header */}
-          <div className="text-center w-full pt-4">
-            <div className="font-arabic text-2xl sm:text-3xl text-gold-dark">
-              بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-            </div>
-            <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[#DFB76C] to-transparent mx-auto my-3" />
-            <p className="font-cinzel text-xs tracking-[0.25em] text-[#8F4E5D] uppercase font-semibold">
-              The Nikah Invitation
-            </p>
-          </div>
-
-          {/* Couple Monogram & Names */}
-          <div className="text-center my-auto">
-            <div className="w-14 h-14 rounded-full border border-[#DFB76C] mx-auto flex items-center justify-center bg-white shadow-sm mb-3">
-              <span className="font-cinzel text-base font-bold text-gold-dark">A &amp; A</span>
-            </div>
-            <h2 className="font-script text-4xl sm:text-5xl text-rose-gold">
-              Ayesha &amp; Ahmed
-            </h2>
-            <p className="font-serif italic text-xs text-stone-500 mt-2">
-              With the blessings of Allah Almighty
-            </p>
-          </div>
-
-          <div className="flex items-center gap-1.5 text-gold-dark text-[10px] font-cinzel tracking-widest pb-2">
-            <Sparkles size={11} className="text-[#DFB76C]" />
-            <span>Clicking opens full invitation</span>
-            <Sparkles size={11} className="text-[#DFB76C]" />
-          </div>
-        </motion.div>
+{/* Bismillah preview removed */}
 
         {/* ENVELOPE GATEFOLD / CENTER DOORS (Opening from the Middle) */}
         
@@ -158,23 +116,7 @@ export const EnvelopeOpening: React.FC<EnvelopeOpeningProps> = ({ onComplete }) 
           </div>
         </motion.div>
 
-        {/* Bottom Flap (or Right Gate Door) */}
-        <motion.div
-          initial={{ y: 0 }}
-          animate={
-            isDoorsOpen
-              ? { y: '102%', opacity: 0 }
-              : { y: '0%', opacity: 1 }
-          }
-          transition={{ duration: 1.1, ease: [0.4, 0, 0.2, 1] }}
-          className="absolute inset-x-0 bottom-0 h-[50%] bg-gradient-to-t from-[#FFFDF9] via-[#FAF6F0] to-[#F5ECEE] z-20 shadow-md border-t border-[#DFB76C]/60 flex flex-col justify-end p-4"
-        >
-          <div className="text-center pb-3">
-            <span className="font-serif italic text-xs text-stone-500">
-              A celebration of love, faith &amp; togetherness
-            </span>
-          </div>
-        </motion.div>
+
 
         {/* HORIZONTAL SILK SATIN RIBBON BAND ACROSS THE CENTER */}
         <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 z-30 pointer-events-none flex items-center justify-center">

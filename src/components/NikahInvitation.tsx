@@ -49,8 +49,8 @@ export const NikahInvitation: React.FC = () => {
           backgroundImage: 'radial-gradient(circle at 50% 15%, #FFFFFF 0%, #FAF6F0 60%, #F5ECDA 100%)',
         }}
       >
-        {/* Subtle Pearl Damask inside card */}
-        <div className="absolute inset-0 bg-pearl-damask opacity-30 rounded-3xl pointer-events-none" />
+        {/* Floral overlay */}
+        <div className="absolute inset-0 bg-[url('./assets/floral-pattern.svg')] bg-cover bg-center opacity-30 pointer-events-none rounded-3xl"></div>
 
         {/* Multi-layered Gold Filigree Inner Border */}
         <div className="absolute inset-2 sm:inset-3 rounded-2xl border border-[#DFB76C]/50 pointer-events-none">
@@ -71,6 +71,8 @@ export const NikahInvitation: React.FC = () => {
               textShadow: '0 1px 12px rgba(223, 183, 108, 0.45)',
             }}
           >
+        {/* Floral overlay */}
+        <div className="absolute inset-0 bg-[url('./assets/floral-pattern.svg')] bg-cover bg-center opacity-30 pointer-events-none rounded-3xl"></div>
             بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
           </p>
 
@@ -202,6 +204,8 @@ export const NikahInvitation: React.FC = () => {
           transition={{ delay: 0.6, duration: 1 }}
           className="mt-8 pt-6 border-t border-dashed border-[#DFB76C]/40 text-center"
         >
+        {/* Floral overlay */}
+        <div className="absolute inset-0 bg-[url('./assets/floral-pattern.svg')] bg-cover bg-center opacity-30 pointer-events-none rounded-3xl"></div>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-blush border border-[#DFB76C]/50">
             <Heart size={13} className="text-[#C98A98] fill-[#ECC8CF]" />
             <span className="font-serif italic text-xs sm:text-sm text-[#8F4E5D] font-medium">

@@ -25,15 +25,6 @@ export const RibbonBow: React.FC<RibbonBowProps> = ({ onUntie, disabled }) => {
       className="relative cursor-pointer select-none group flex items-center justify-center"
       title="Tap the Bow to Open"
     >
-      {/* Gentle breathing glow behind bow */}
-      <motion.div
-        animate={{
-          scale: [1, 1.12, 1],
-          opacity: [0.35, 0.7, 0.35],
-        }}
-        transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute -inset-4 rounded-full bg-gradient-to-r from-gold-champagne via-rose-soft to-gold-light blur-md pointer-events-none"
-      />
 
       {/* Main Bow Element */}
       <motion.div
@@ -55,7 +46,7 @@ export const RibbonBow: React.FC<RibbonBowProps> = ({ onUntie, disabled }) => {
           animate={
             isUntying
               ? { x: -45, rotate: -25, scale: 0.6, opacity: 0 }
-              : { rotate: [-2, 2, -2] }
+              : {}
           }
           transition={
             isUntying
@@ -79,7 +70,7 @@ export const RibbonBow: React.FC<RibbonBowProps> = ({ onUntie, disabled }) => {
           animate={
             isUntying
               ? { x: 45, rotate: 25, scale: 0.6, opacity: 0 }
-              : { rotate: [2, -2, 2] }
+              : {}
           }
           transition={
             isUntying
